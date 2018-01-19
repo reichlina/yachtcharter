@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=""><img id="logo" src="logo.png"></a></a>
+            <a href="{{ route('start') }}" class="navbar-brand" ><img id="logo" src="{{ asset('images/logo.png') }}"/></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

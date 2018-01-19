@@ -22,15 +22,27 @@
 <div id="page">
     @include('partials.header')
     <div id="app">
-    @yield('content')
+        <div class="row">
+            <div class="column" id="column-left">
+                <div class="w3-sidebar w3-bar-block w3-border-right">
+                    <a href="{{route('rent')}}" class="w3-bar-item w3-button">Vermietung</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                </div>
+            </div>
+            <div class="column" id="column-middle">
+                @yield('content')
+            </div>
+            <div class="column" id="column-right">
+                <h3>Kontakt</h3>
+            </div>
 
-
-    <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
-                integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-                crossorigin="anonymous"></script>
+            <!-- Scripts -->
+            <script src="{{ asset('js/app.js') }}"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+                    integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+                    crossorigin="anonymous"></script>
+        </div>
     </div>
-</div>
 </body>
 </html>
