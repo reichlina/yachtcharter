@@ -24,8 +24,8 @@
     <div id="app">
         <div class="row">
             <div class="column" id="column-left">
-                <div class="w3-sidebar w3-bar-block w3-border-right">
-                    <a href="{{route('rent')}}" class="w3-bar-item w3-button">Vermietung</a>
+                <div class="w3-sidebar w3-bar-block">
+                    <a href="{{route('segelyachts')}}" class="w3-bar-item w3-button">Segel Yachten</a>
                     <a href="#" class="w3-bar-item w3-button">Link 2</a>
                     <a href="#" class="w3-bar-item w3-button">Link 3</a>
                 </div>

@@ -19,11 +19,22 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/segelyachts', [
+    'uses' => 'YachtController@getSegelYachts',
+    'as' => 'segelyachts'
+]);
 
-Route::get('/rent', 'RentController@index')->name('rent');
+Route::get('/add-to-cart/{id}', [
+    'uses' => 'YachtController@getAddtoCart',
+    'as' => 'addToCart'
+]);
+
+Route::get('/shoppingCart', [
+    'uses' => 'YachtController@getCart',
+    'as' => 'shoppingCart'
+]);
 
 Route::get('/home', function() {
     return view('shop.index');
 })->name('start');
-
 

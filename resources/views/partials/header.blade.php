@@ -24,7 +24,9 @@
                     <li><a href="{{ route('login') }}">Anmelden</a></li>
                     <li><a href="{{ route('register') }}">Registrieren</a></li>
                 @else
-                    <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Warenkorb</a></li>
+                    <li><a href="{{route('shoppingCart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"> <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span></i> Warenkorb</a>
+
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><i class="fa fa-user" aria-hidden="true"></i>
                             {{ Auth::user()->name }} <span class="caret"></span>
